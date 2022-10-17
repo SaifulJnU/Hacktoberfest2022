@@ -3,7 +3,7 @@
     Bio : Currently pursuing CSE at Jagannath University, Dhaka
     GitHub URL :[SaifulJnU](https://github.com/saifuljnu)
 
-2.  Name : 
-    Place : 
-    Bio : 
-    GitHub URL :
+2. #### Name: [Asir Shahriar Roudra](https://github.com/roudra323)
+- Place: Dhaka, Bangladesh
+- Bio: I am a CS student.
+- Github: [Asir Shahriar Roudra](https://github.com/roudra323)
