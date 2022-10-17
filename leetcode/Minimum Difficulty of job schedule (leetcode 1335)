@@ -1,0 +1,38 @@
+class Solution {
+public:
+    
+    int dfs(vector<int> &jobDifficulty,int d,int idx,vector<vector<int>> &dp)
+    {
+        
+        if(dp[d][idx]!=-1)
+            return dp[d][idx];
+        
+        if(d==1)
+            return dp[d][idx] = *max_element(jobDifficulty.begin()+idx,jobDifficulty.end());
+        
+        
+        int temp=0;
+        
+        int ret=INT_MAX;
+        for(int i =idx;i<jobDifficulty.size()-d+1;i++)
+        {
+            
+            temp = max(temp,jobDifficulty[i]);
+            ret=min(ret,temp+dfs(jobDifficulty,d-1,i+1,dp));
+        }
+        
+        return dp[d][idx]=ret;
+    }
+    
+    int minDifficulty(vector<int>& jobDifficulty, int d) {
+        
+        int n= jobDifficulty.size();
+        vector<vector<int>> dp(d+1,vector<int>(n,-1));
+        
+        if(d>n)
+            return -1;
+        
+        return dfs(jobDifficulty,d,0,dp);
+                
+    }
+};
