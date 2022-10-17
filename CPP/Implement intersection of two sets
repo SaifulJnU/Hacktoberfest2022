@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+int i,k=0,x[10],y[10],c[25],j,n,n1,d[25],f=0;
+cout<<"How many elements in SET 1: ";
+cin>>n;
+cout<<"Please enter the elements : ";
+for(i=0;i<n;i++)
+{
+cin>>x[i];
+}
+cout<<"How many elements in set 2: ";
+cin>>n1;
+cout<<"Please enter elements: ";
+for(i=0;i<n1;i++)
+{
+cin>>y[i];
+}
+for(j=0;j<n;j++)
+{
+for(i=0;i<n1;i++)
+{
+if(y[i]==x[j])
+break;
+}
+if(i!=n1)
+{
+d[f]=y[i];
+f++;
+}
+}
+cout<<"The Intersection of set is A and B is : "<<endl;
+for(i=0;i<f;i++)
+cout<<"\t "<<d[i];
+}
