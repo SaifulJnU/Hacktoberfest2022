@@ -1,0 +1,22 @@
+#include <stdio.h>  
+int main()  
+{  
+    //declaring the variables
+    int i,j,k;
+    //first for loop for lines creation parent for loop
+     for(int i=1;i<=5;i++)  
+    {  
+        //child for loop for printing the blank spaces 
+        for(k=5;k>=i;k--)  
+        {  
+            printf(" ");  
+        }  
+        //for loop to print the * pyramid
+        for(j=1;j<=i;j++)  
+        {  
+            printf("* ");  
+        }  
+        printf("\n");  
+    }  
+    return 0;  
+}
